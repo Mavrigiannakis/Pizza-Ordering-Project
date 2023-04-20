@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace PizzaOrder
 {
@@ -220,7 +221,7 @@ namespace PizzaOrder
                 paymentTB.Text = "";
                 paymentTB.Focus();
             }
-            else if (paymentCB.Text == "Cash on Delivery")
+            else if (paymentCB.Text != "")
             {
                 nameTB.Enabled = true;
                 addressTB.Enabled = true;
@@ -241,6 +242,48 @@ namespace PizzaOrder
 
         private void totalBT_Click(object sender, EventArgs e)
         {
+            if (italianTB.Enabled == false)
+            {
+                italianTB.Text = "0";
+            }
+            if (barbequeTB.Enabled == false)
+            {
+                barbequeTB.Text = "0";
+            }
+            if (vegeroniTB.Enabled == false)
+            {
+                vegeroniTB.Text = "0";
+            }
+            if (supremeTB.Enabled == false)
+            {
+                supremeTB.Text = "0";
+            }
+            if (seafoodTB.Enabled == false)
+            {
+                seafoodTB.Text = "0";
+            }
+            if (colaTB.Enabled == false)
+            {
+                colaTB.Text = "0";
+            }
+            if (zeroTB.Enabled == false)
+            {
+                zeroTB.Text = "0";
+            }
+            if (pepsiTB.Enabled == false)
+            {
+                pepsiTB.Text = "0";
+            }
+            if (spriteTB.Enabled == false)
+            {
+                spriteTB.Text = "0";
+            }
+            if (fantaTB.Enabled == false)
+            {
+                fantaTB.Text = "0";
+            }
+
+
             double[] itemcost = new double[100];
             itemcost[0] = Convert.ToDouble(italianTB.Text) * price_italian;
             itemcost[2] = Convert.ToDouble(barbequeTB.Text) * price_barbeque;
@@ -251,26 +294,27 @@ namespace PizzaOrder
             itemcost[7] = Convert.ToDouble(zeroTB.Text) * price_zero;
             itemcost[8] = Convert.ToDouble(pepsiTB.Text) * price_pepsi;
             itemcost[9] = Convert.ToDouble(spriteTB.Text) * price_sprite;
-            itemcost[10] = Convert.ToDouble(fantaTB.Text) * price_fanta;
+            itemcost[10]= Convert.ToDouble(fantaTB.Text) * price_fanta;
 
-            double total, payment, cost;
-            if (paymentCB.Text == "Cash")
+            double total, payment = 0, cost;
+            if (paymentCB.Enabled == true)
             {
                 total = itemcost[0] + itemcost[2] + itemcost[3] + itemcost[4] + itemcost[5] + itemcost[6] + itemcost[7] + itemcost[8] + itemcost[9] + itemcost[10];
 
                 resultLB.Text = Convert.ToString(total);
-
-                payment = Convert.ToInt32(paymentTB.Text);
+                payment = total;
+                MessageBox.Show(payment + " ");
+                //payment = Convert.ToDouble(paymentTB.Text);
                 cost = payment - total;
                 changeresultLB.Text = Convert.ToString(cost);
-             }
+            }
             else
             {
                 total = itemcost[0] + itemcost[2] + itemcost[3] + itemcost[4] + itemcost[5] + itemcost[6] + itemcost[7] + itemcost[8] + itemcost[9] + itemcost[10];
 
                 resultLB.Text = Convert.ToString(total);
 
-                payment = Convert.ToInt32(paymentTB.Text);
+                payment = Convert.ToDouble(paymentTB.Text);
                 cost = payment - total;
                 changeresultLB.Text = Convert.ToString(cost);
             }
@@ -283,32 +327,23 @@ namespace PizzaOrder
         }
         private void ResetTextBox()
         {
-            Action<Control.ControlCollection> func = null;
-
-            func = (controls) =>
-            {
-                foreach (Control control in controls)
-                    if (control is TextBox)
-                        (control as TextBox).Text = "0";
-                    else
-                        func(Controls);
-            };
-            func(Controls);  
+            foreach (TextBox textBox in Controls.OfType<TextBox>())
+                textBox.Text = "";
         }
         private void ResetCheckBox()
         {
-            Action<Control.ControlCollection> func = null;
-
-            func = (controls) =>
-            {
-                foreach (Control control in controls)
-                    if (control is CheckBox)
-                        (control as CheckBox).Text = "0";
-                    else
-                        func(Controls);
-            };
-            func(Controls);
+            italianCHB.Checked = false;
+            barbequeCHB.Checked = false;
+            veganvegeroniCHB.Checked = false;
+            supremeCHB.Checked = false;
+            seafoodCHB.Checked = false;
+            cocacolaCHB.Checked = false;
+            zeroCHB.Checked = false;
+            pepsiCHB.Checked = false;
+            spriteCHB.Checked = false;
+            fantaCHB.Checked = false;
         }
+        
         private void okBT_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Thank you for choosing Stelios Pizza" + nameTB + "We will deliver your Order at"

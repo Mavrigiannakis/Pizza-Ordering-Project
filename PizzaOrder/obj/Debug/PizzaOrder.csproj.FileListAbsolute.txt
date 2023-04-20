@@ -10,3 +10,15 @@ C:\Users\mulle\source\repos\Mavrigiannakis\C-\PizzaOrder\PizzaOrder\obj\Debug\Pi
 C:\Users\mulle\source\repos\Mavrigiannakis\C-\PizzaOrder\PizzaOrder\obj\Debug\PizzaOrder.csproj.CoreCompileInputs.cache
 C:\Users\mulle\source\repos\Mavrigiannakis\C-\PizzaOrder\PizzaOrder\obj\Debug\PizzaOrder.exe
 C:\Users\mulle\source\repos\Mavrigiannakis\C-\PizzaOrder\PizzaOrder\obj\Debug\PizzaOrder.pdb
+C:\Users\mulle\Source\Repos\Mavrigiannakis\Pizza-Ordering-Project\PizzaOrder\bin\Debug\PizzaOrder.exe.config
+C:\Users\mulle\Source\Repos\Mavrigiannakis\Pizza-Ordering-Project\PizzaOrder\bin\Debug\PizzaOrder.exe
+C:\Users\mulle\Source\Repos\Mavrigiannakis\Pizza-Ordering-Project\PizzaOrder\bin\Debug\PizzaOrder.pdb
+C:\Users\mulle\Source\Repos\Mavrigiannakis\Pizza-Ordering-Project\PizzaOrder\obj\Debug\PizzaOrder.csproj.AssemblyReference.cache
+C:\Users\mulle\Source\Repos\Mavrigiannakis\Pizza-Ordering-Project\PizzaOrder\obj\Debug\PizzaOrder.csproj.SuggestedBindingRedirects.cache
+C:\Users\mulle\Source\Repos\Mavrigiannakis\Pizza-Ordering-Project\PizzaOrder\obj\Debug\PizzaOrder.frm_front.resources
+C:\Users\mulle\Source\Repos\Mavrigiannakis\Pizza-Ordering-Project\PizzaOrder\obj\Debug\PizzaOrder.frm_items.resources
+C:\Users\mulle\Source\Repos\Mavrigiannakis\Pizza-Ordering-Project\PizzaOrder\obj\Debug\PizzaOrder.Properties.Resources.resources
+C:\Users\mulle\Source\Repos\Mavrigiannakis\Pizza-Ordering-Project\PizzaOrder\obj\Debug\PizzaOrder.csproj.GenerateResource.cache
+C:\Users\mulle\Source\Repos\Mavrigiannakis\Pizza-Ordering-Project\PizzaOrder\obj\Debug\PizzaOrder.csproj.CoreCompileInputs.cache
+C:\Users\mulle\Source\Repos\Mavrigiannakis\Pizza-Ordering-Project\PizzaOrder\obj\Debug\PizzaOrder.exe
+C:\Users\mulle\Source\Repos\Mavrigiannakis\Pizza-Ordering-Project\PizzaOrder\obj\Debug\PizzaOrder.pdb
