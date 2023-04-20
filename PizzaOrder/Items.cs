@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace PizzaOrder
@@ -346,8 +347,11 @@ namespace PizzaOrder
         
         private void okBT_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Thank you for choosing Stelios Pizza" + nameTB + "We will deliver your Order at"
-                + addressTB + "We will send a message at" + phoneTB);
+            string name = nameTB.Text;
+            string address = addressTB.Text;
+            string phone = phoneTB.Text;
+            MessageBox.Show($"Thank you for choosing Stelios Pizza {name} " + $"We will deliver your Order at {address} " +
+                 $"We will send a message at {phone} " );
         }
     }
 }
